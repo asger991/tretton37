@@ -4,19 +4,33 @@ import StyledContainer from "components/Container";
 import StyledCard from "components/Card";
 import Layout from "components/Layout/";
 
-const Home = ({}) => {
+const Home = ({ employees }) => {
   return (
     <Layout>
       <StyledHeader>The fellowship of the tretton37</StyledHeader>
       <StyledDiv>PELLE</StyledDiv>
       <StyledContainer>
-        {testData.map((card) => (
-          <StyledCard key={testData.id} data={card} />
+        {employees.map((employee) => (
+          <StyledCard key={employee.id} data={employee} />
         ))}
       </StyledContainer>
     </Layout>
   );
 };
+
+export async function getStaticProps() {
+  const res = await fetch("https://api.1337co.de/v3/employees", {
+    headers: {
+      Authorization: process.env.API_KEY,
+    },
+  });
+  const employees = await res.json();
+  return {
+    props: {
+      employees,
+    },
+  };
+}
 
 const StyledHeader = styled.h2`
   font-size: 2rem;
@@ -32,46 +46,3 @@ const StyledDiv = styled.div`
 `;
 
 export default Home;
-
-const testData = [
-  {
-    id: 1,
-    name: "Janie Barber",
-    office: "Lund",
-  },
-  {
-    id: 2,
-    name: "Sadie Morales",
-    office: "Lund",
-  },
-  {
-    id: 3,
-    name: "Janie Barber",
-    office: "Lund",
-  },
-  {
-    id: 4,
-    name: "Sadie Morales",
-    office: "Lund",
-  },
-  {
-    id: 5,
-    name: "Janie Barber",
-    office: "Lund",
-  },
-  {
-    id: 6,
-    name: "Sadie Morales",
-    office: "Lund",
-  },
-  {
-    id: 7,
-    name: "Janie Barber",
-    office: "Lund",
-  },
-  {
-    id: 8,
-    name: "Sadie Morales",
-    office: "Lund",
-  },
-];
