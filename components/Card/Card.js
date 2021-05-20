@@ -1,6 +1,6 @@
+import CardImage from "components/CardImage";
 import {
   Card,
-  CardImage,
   CardInfo,
   CardText,
   CardIcons,
@@ -11,7 +11,7 @@ import {
 const StyledCard = ({ data }) => {
   return (
     <Card key={data.id}>
-      <CardImage>IMAGE</CardImage>
+      <CardImage employee={data} />
 
       <CardInfo>
         <CardText>

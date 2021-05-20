@@ -9,26 +9,22 @@ export const Card = styled.div`
   box-shadow: 0px 3px 11px 6px rgba(209, 209, 209, 0.59);
   background-color: #fff;
   height: 100%;
-  padding: 2rem;
+  padding: 3rem;
   margin-bottom: 2rem;
 
   @media (min-width: 768px) {
     width: ${px2vw(320, 768)};
     min-height: ${px2vw(200, 768)};
     height: 100%;
+    margin-bottom: 2rem;
   }
 
   @media (min-width: 1024px) {
     width: ${px2vw(300)};
     min-height: ${px2vw(300)};
     height: 100%;
-    padding: 1rem;
+    margin-bottom: 6rem;
   }
-`;
-
-export const CardImage = styled.div`
-  min-height: 300px;
-  background-color: #000;
 `;
 
 export const CardInfo = styled.div`
@@ -48,7 +44,6 @@ export const CardIcons = styled.div`
 
 export const CardName = styled.h4`
   color: #333;
-  font-size: 1.5rem;
   text-align: left;
   padding: 0.5rem 0;
   background-color: #fff;
@@ -60,7 +55,6 @@ export const CardName = styled.h4`
 
 export const CardOffice = styled.h4`
   color: #666;
-  font-size: 1.5rem;
   text-align: left;
   background-color: #fff;
 
