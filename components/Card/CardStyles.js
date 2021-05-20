@@ -9,7 +9,7 @@ export const Card = styled.div`
   box-shadow: 0px 3px 11px 6px rgba(209, 209, 209, 0.59);
   background-color: #fff;
   height: 100%;
-  padding: 3rem;
+  padding: 2rem;
   margin-bottom: 2rem;
 
   @media (min-width: 768px) {

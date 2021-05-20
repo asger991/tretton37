@@ -10,7 +10,7 @@ const CardImage = ({ employee }) => {
           alt={name}
           src={imagePortraitUrl}
           layout="responsive"
-          height="150"
+          height="185"
           width="150"
         />
       ) : (
@@ -18,7 +18,7 @@ const CardImage = ({ employee }) => {
           alt="missing-picture"
           src="/avatar.png"
           layout="responsive"
-          height="150"
+          height="185"
           width="150"
         />
       )}
