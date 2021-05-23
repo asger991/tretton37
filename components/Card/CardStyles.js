@@ -36,12 +36,6 @@ export const CardText = styled.div`
   flex-grow: 1;
 `;
 
-export const CardIcons = styled.div`
-  flex-grow: 1;
-  justify-content: flex-end;
-  background-color: #fff;
-`;
-
 export const CardName = styled.h4`
   color: #333;
   text-align: left;
@@ -49,7 +43,7 @@ export const CardName = styled.h4`
   background-color: #fff;
 
   @media (min-width: 1024px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -59,6 +53,18 @@ export const CardOffice = styled.h4`
   background-color: #fff;
 
   @media (min-width: 1024px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+`;
+
+export const IconContainer = styled.div`
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  background-color: #fff;
+  flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
   }
 `;
