@@ -5,7 +5,6 @@ import Employees from "components/Employees";
 import Layout from "components/Layout";
 
 const Home = ({ employees }) => {
-  // console.log(employees[0]);
   return (
     <Layout>
       <StyledHeader>The fellowship of the tretton37</StyledHeader>
