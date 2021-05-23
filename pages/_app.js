@@ -7,10 +7,6 @@ const Global = createGlobalStyle`
     box-sizing: border-box;
     color: #666;
     background-color: #efefef;
-    font-size: 90%;
-
-    @media (min-width: 768px) {
-      font-size: 100%;
     }
   }
 `;
