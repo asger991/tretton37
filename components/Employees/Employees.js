@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { useRef, useState, useEffect } from "react";
 
 import usePagination from "utils/usePagination";

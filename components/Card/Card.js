@@ -28,23 +28,38 @@ const StyledCard = ({ data }) => {
 
       <CardInfo>
         <CardText>
-          <CardName>{name}</CardName>
-          <CardOffice>Office: {office}</CardOffice>
+          <CardName aria-label="Employee name">{name}</CardName>
+          <CardOffice aria-label="Employee office">Office: {office}</CardOffice>
         </CardText>
-        <IconContainer>
+        <IconContainer aria-label="Employee's other accounts">
           {linkedIn && (
             <Link href={linkedInAccount} passHref>
-              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                size="2x"
+                aria-label="Linkedin"
+                tabIndex="0"
+              />
             </Link>
           )}
           {gitHub && (
             <Link href={githubAccount} passHref>
-              <FontAwesomeIcon icon={faGithubSquare} size="2x" />
+              <FontAwesomeIcon
+                icon={faGithubSquare}
+                size="2x"
+                aria-label="Employee Github"
+                tabIndex="0"
+              />
             </Link>
           )}
           {twitter && (
             <Link href={twitterAccount} passHref>
-              <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
+              <FontAwesomeIcon
+                icon={faTwitterSquare}
+                size="2x"
+                aria-label="Employee Twitter"
+                tabIndex="0"
+              />
             </Link>
           )}
         </IconContainer>

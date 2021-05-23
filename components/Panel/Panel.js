@@ -2,9 +2,8 @@
 import { StyledPanel, StyledTitle, StyledButton } from "./PanelStyles";
 
 const Panel = ({ data }) => {
-  const employees = data;
   const sortByNameAndOffice = () => {
-    employees.sort((a, b) =>
+    data.sort((a, b) =>
       a.office > b.office
         ? 1
         : a.name === b.name
@@ -16,16 +15,32 @@ const Panel = ({ data }) => {
   };
 
   const sortByName = () => {
-    employees.sort((a, b) => (a.name > b.name ? 1 : -1));
+    data.sort((a, b) => (a.name > b.name ? 1 : -1));
   };
 
   return (
-    <StyledPanel>
+    <StyledPanel aria-label="Filters">
       <StyledTitle>Filters</StyledTitle>
-      <StyledButton onClick={sortByNameAndOffice}>
+      <StyledButton
+        onClick={sortByNameAndOffice}
+        onKeyPress={(event) => event.key === "Enter" && sortByNameAndOffice}
+        aria-label="Sort employees shown by name and office"
+        role="button"
+        tabIndex="0"
+        title="sort by name and office"
+      >
         Sort by name/office
       </StyledButton>
-      <StyledButton onClick={sortByName}>Sort by name only</StyledButton>
+      <StyledButton
+        onClick={sortByName}
+        onKeyPress={(event) => event.key === "Enter" && sortByName}
+        aria-label="Sort employees shown by name only"
+        role="button"
+        tabIndex="0"
+        title="sort by name only"
+      >
+        Sort by name only
+      </StyledButton>
     </StyledPanel>
   );
 };
