@@ -28,6 +28,7 @@ const Panel = ({ data }) => {
         role="button"
         tabIndex="0"
         title="sort by name and office"
+        data-cy="sort-office-button"
       >
         Sort by name/office
       </StyledButton>
@@ -38,6 +39,7 @@ const Panel = ({ data }) => {
         role="button"
         tabIndex="0"
         title="sort by name only"
+        data-cy="sort-name-button"
       >
         Sort by name only
       </StyledButton>

@@ -20,8 +20,8 @@ import {
 const StyledCard = ({ data }) => {
   const { id, name, office, linkedIn, gitHub, twitter } = data;
   const linkedInAccount = `https://www.linkedin.com${linkedIn}`;
-  const githubAccount = `https://www.github.com${gitHub}`;
-  const twitterAccount = `https://www.twitter.com${twitter}`;
+  const githubAccount = `https://www.github.com/${gitHub}`;
+  const twitterAccount = `https://www.twitter.com/${twitter}`;
   return (
     <Card key={id}>
       <CardImage employee={data} />
@@ -39,6 +39,7 @@ const StyledCard = ({ data }) => {
                 size="2x"
                 aria-label="Linkedin"
                 tabIndex="0"
+                data-cy="linkedin-link"
               />
             </Link>
           )}
@@ -49,6 +50,7 @@ const StyledCard = ({ data }) => {
                 size="2x"
                 aria-label="Employee Github"
                 tabIndex="0"
+                data-cy="github-link"
               />
             </Link>
           )}
@@ -59,6 +61,7 @@ const StyledCard = ({ data }) => {
                 size="2x"
                 aria-label="Employee Twitter"
                 tabIndex="0"
+                data-cy="twitter-link"
               />
             </Link>
           )}
