@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next -p 4000"
+    "start": "next -p 4000",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -22,6 +24,7 @@
     "@babel/plugin-proposal-decorators": "^7.14.2",
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.8.0",
+    "cypress": "^7.3.0",
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
